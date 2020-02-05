@@ -5,16 +5,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.springbootdi.app.models.service.MyService;
+import com.springbootdi.app.models.service.IService;
 
 @Controller
 public class IndexController {
 	@Autowired
-	private MyService service;
-	
-	@GetMapping({"/","","index"})
+	private IService service;
+	/*I use Interface cause is better than use Java class*/
+	@GetMapping({"/","","/index"})
 	public String index(Model model) {
-		model.addAttribute("obj",service.exOperation("Bucando..."));
+		model.addAttribute("obj",service.exOperation());
 		return "index";
 	}
 }
