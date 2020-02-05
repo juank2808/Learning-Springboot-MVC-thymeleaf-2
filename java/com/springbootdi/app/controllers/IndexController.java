@@ -9,12 +9,25 @@ import com.springbootdi.app.models.service.IService;
 
 @Controller
 public class IndexController {
-	@Autowired
+	
 	private IService service;
 	/*I use Interface cause is better than use Java class*/
+	
+	/*@Autowired*/
+	public IndexController(IService service) {
+		this.service = service;
+	}
+	
 	@GetMapping({"/","","/index"})
 	public String index(Model model) {
 		model.addAttribute("obj",service.exOperation());
 		return "index";
 	}
+	
+	
+	
+	/*public void setService(IService service) {
+		this.service = service;
+	}*/
+	
 }
