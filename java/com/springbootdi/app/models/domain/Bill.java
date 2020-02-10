@@ -13,6 +13,7 @@ public class Bill {
 	private String description;
 	@Autowired
 	private Client client;
+	@Autowired
 	private List<BillItem> items;
 
 	public String getDescription() {
