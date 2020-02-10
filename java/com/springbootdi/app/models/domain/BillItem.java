@@ -22,5 +22,8 @@ public class BillItem {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
+	public int calculateAmount() {
+		return quantity * product.getPrice();
+	}
 	
 }
