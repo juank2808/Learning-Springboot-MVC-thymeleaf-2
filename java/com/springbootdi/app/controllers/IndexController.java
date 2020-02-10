@@ -12,7 +12,7 @@ import com.springbootdi.app.models.service.IService;
 public class IndexController {
 	
 	@Autowired
-	@Qualifier("MyServiceComplete")
+	//@Qualifier("MyServiceSimple")
 	private IService service;
 	/*I use Interface cause is better than use Java class*/
 	

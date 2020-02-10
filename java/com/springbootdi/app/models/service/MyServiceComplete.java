@@ -3,8 +3,9 @@ package com.springbootdi.app.models.service;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-@Component("MyServiceComplete")//component name
-@Primary /* i use primary to assign the default injection */
+//@Primary /* i use primary to assign the default injection */
+//@Component("MyServiceComplete")//component name
+
 public class MyServiceComplete implements IService{
 	
 	
